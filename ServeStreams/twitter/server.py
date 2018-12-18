@@ -10,7 +10,7 @@ def get_tweets(auth_object):
     url = 'https://stream.twitter.com/1.1/statuses/filter.json'
     query_data = [('language', 'en'),
                   ('locations', '-74,40,-73,41'),
-                  ('track', '#')]
+                  ('track', '#firedolan')]
     query_url = url + '?' + \
         '&'.join([str(t[0]) + '=' + str(t[1]) for t in query_data])
     response = requests.get(query_url, auth=auth_object, stream=True)
